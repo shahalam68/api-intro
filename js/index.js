@@ -10,9 +10,16 @@ const stringified = JSON.stringify(user);
 const shop ={
     name: 'Alia Store',
     address: 'Ranbir road',
+    profit:15000,
     product:['laptop','mobile','pepsi'],
+    owner:{
+        name: "Alia Bahat",
+        Profession: "owner",
+    },
     isExpensive: false
 }
 const shopStringified = JSON.stringify(shop);
-console.log(shop);
+// console.log(shop);
 console.log(shopStringified);
+const converted = JSON.parse(shopStringified);
+console.log(converted);
