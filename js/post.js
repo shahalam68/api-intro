@@ -17,3 +17,18 @@ function displayPosts(posts){
         postContainer.appendChild(div);
     }
 }
+
+
+function addPost(){
+    fetch("https://jsonplaceholder.typicode.com/posts",{
+        method:'POST',
+        body: JSON.stringify({
+            title: 'My New Post',
+            body:'this is my post',
+            userId:1
+        }),
+        headers:{
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+}
